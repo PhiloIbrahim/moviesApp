@@ -1,0 +1,43 @@
+<div class="container py-5">
+    <input class="form-control mb-4" type="text">
+    <div class="row">
+        <div *ngFor = "let movie of movies" class="col-md-6">
+            <div class="movie-card">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="img-fluid" src="https://image.tmdb.org/t/p/original{{movie.poster_path}}">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="movie-info text-white">
+                            <h2>{{movie.title}}</h2>
+                            <i class="fa fa-star"></i>
+                            <p>{{movie.overview}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+<div class="container">
+    {{userData.controls.userName.touched}}
+    <form [formGroup]="userData" (ngSubmit)="submitForm()">
+        <div class="form=group">
+            <label>userName</label>
+            <input formControlName ="userName" type="text" class="form-control">
+            <div *ngIf="userData.controls.userName.touched&&userData.controls.userName.errors!=null" class="alert alert-danger">userName must be larger than 7 characters</div>
+        </div>
+        <div class="form=group">
+            <label>userAge</label>
+            <input formControlName ="userAge" type="text" class="form-control">
+            <div class="alert alert-danger">Age must be larger than 15 years</div>
+        </div>
+        <div class="form=group">
+            <label>userSalary</label>
+            <input formControlName ="userSalary" type="text" class="form-control">
+        </div>
+        <button [disabled]="userData.invalid" class="btn btn-info" type="submit">Submit</button>
+    </form>
+</div>
+-->

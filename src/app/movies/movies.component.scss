@@ -1,0 +1,10 @@
+@mixin boxShadow($x, $y, $b, $c) {
+    -webkit-box-shadow:$x $y $b $c;
+    -moz-box-shadow:$x $y $b $c;
+    -o-box-shadow:$x $y $b $c;
+    -ms-box-shadow:$x $y $b $c;
+    box-shadow:$x $y $b $c;
+}
+.movie-card {
+    @include boxShadow(0, 0, 10px, #8989c9)
+}
